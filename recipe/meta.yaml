@@ -1,5 +1,5 @@
 {% set name = "PyLBFGS" %}
-{% set version = "0.2.0.13" %}
+{% set version = "0.2.0.14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e65cb485fff24af8da929e57011389084a41a30ca39727d1e5f0d276ce8c287e
+  sha256: 0394ac3de598b818a01fb225a6b853abbd0e09620e35c072c6c96b0bbe558b99
 
 build:
-  number: 2
-  skip: True  # [win]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  skip: true  # [win]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -35,7 +35,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'LBFGS and OWL-QN optimization algorithms'
+  summary: LBFGS and OWL-QN optimization algorithms
   doc_url: https://github.com/dedupeio/pylbfgs
   dev_url: https://github.com/dedupeio/pylbfgs
 
