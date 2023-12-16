@@ -1,5 +1,5 @@
 {% set name = "PyLBFGS" %}
-{% set version = "0.2.0.14" %}
+{% set version = "0.2.0.15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0394ac3de598b818a01fb225a6b853abbd0e09620e35c072c6c96b0bbe558b99
+  sha256: 01b05e381eafaba873453222af527eeb29b2b44771c4523917bd956403e6ceb7
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
